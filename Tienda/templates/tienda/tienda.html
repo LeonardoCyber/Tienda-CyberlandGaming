@@ -1,0 +1,135 @@
+{%load static%}
+
+<html>
+  
+<head>
+
+  <div style="position: top; 
+  background-color: rgb(95, 0, 249, 0.367);
+  box-shadow: 0 0 15px rgba(95, 0, 249), 0 0 15px rgba(95, 0, 249);">
+  {%if request.user.is_authenticated%}
+    {% include "carro/widget.html" %}
+  {%else%}
+     <div class="alert alert-danger debeslo">Logeate para comprar</div>
+  {%endif%}
+  </div>  
+
+    <!-- Bootstrap -->
+    <link href="{% static 'CG_app/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Quicksand&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{% static 'CG_app/css/gestion.css'%}" rel="stylesheet">
+    <link href="{% static 'CG_app/css/grid.css'%}" 
+    rel="stylesheet">
+  <title>CyberlandGaming</title>
+  
+</head> 
+
+<body class="bodyTienda">
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      
+        <span class="site-heading-lower">✯Tienda✯</span>
+      </h1>
+
+      <div class="LoginUse">
+        {% if user.is_authenticated%}
+          ¡Hola {{user.username}}! &nbsp; &nbsp; <a style="color:yellow ;" href="{%url 'cerrar_sesion'%}">Cerrar sesión</a>
+        {%else%}
+          <a style="color: yellow ;" href="{% url 'logear' %}">Login</a><span style="color: rgb(255, 255, 255) ;">/</span><a style="color:yellow ;" href="{% url 'autenticacion'%}">Registrate</a>
+        {%endif%}
+      </div>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">Gestión de Pedidos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if  request.path == '/' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+          </li>
+          <li class="nav-item {% if  request.path == '/servicios' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
+          </li>
+          <li class="nav-item {% if  request.path == '/tienda' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">✯Tienda✯</a>
+          </li>
+          <!-- <li class="nav-item {% if  request.path == '/TiendaPS5' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'TiendaPS5' %}">Tienda ✯PS5✯</a>
+          </li> -->
+          <li class="nav-item {% if  request.path == '/contacto' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+          </li>
+          <li class="nav-item {% if  request.path == '/blog' %} active {%endif%} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+<br>
+<div class="container">
+  {% for producto in productos %}     
+    
+  <div class="productodiv"> 
+      <img src="{{producto.imagen.url}}">
+      <div class="informacion">
+        
+        <span class="nombreProducto">{{producto.nombre}}</span>
+        <span class="envio">Envío gratis</span>
+        <span class="precioProducto">{{producto.precio}}&nbsp;$</span>
+      
+      </div>
+    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success botonCarro" >Agregar al carro</a>
+  </div>
+  {%endfor%}
+</div>
+<br>
+<footer class="footer text-faded text-center py-5">
+  <div class="container" style="height: 60px;">
+    <p class="m-0">
+      <a href="#" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      <a href="#" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      <a href="#" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+  </p>
+  </div>
+</footer>
+
+<!-- Bootstrap -->
+<script src="{%static 'CG_app/vendor/jquery/jquery.min.js'%}"></script>
+<script src="{%static 'CG_app/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+</body>
+
+
+</html>

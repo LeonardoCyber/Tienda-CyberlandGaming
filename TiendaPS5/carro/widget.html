@@ -1,0 +1,50 @@
+<table class="table-bordered" style="color:rgb(255, 255, 255) ; box-shadow: inset 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);">
+  <thead>
+    <tr>
+        <th colspan="3" class="text-center" style="background-color: rgb(114, 19, 19); font-family: 'Lora';">
+           
+            Carro compras
+        
+        </th>
+    </tr>
+     <tr style="background-color: rgba(114, 19, 19); font-family: 'Lora';">
+        <th style="font-family:'Lora' ;">Producto</th>
+        <th style="font-family:'Lora' ;">Cantidad</th>
+        <th style="font-family:'Lora' ;">Suma</th>
+    </tr>
+  </thead> 
+  <body>
+    {% if request.session.carroPS5.items %}
+      {% for key, value in request.session.carroPS5.items %}
+        <tr class="text-center">
+            <td>{{value.nombrePS5}}</td>
+            <td>{{value.cantidadPS5}}</td>
+            <td>
+                <a href="{% url 'carroPS5:agregarPS5' value.productoPS5_id %}" class="btn btn-sm btn-success">+</a>
+                <a href="{% url 'carroPS5:restarPS5' value.productoPS5_id %}" class="btn btn-sm btn-success">-</a><br>
+                {{value.precioPS5}} $
+            </td>
+        </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td colspan="3" style="background-color: rgb(114, 19, 19);" >
+            <div class="alert alert-danger text-center" style="background-color: rgb(255, 0, 0); color:rgb(255, 255, 255);
+            font-size: 150%;
+            font-family:'Lora';
+            text-shadow: 0 0 5px rgb(255, 0, 0);">
+                Sin productos
+            </div>
+        </td>
+      </tr>
+    {% endif %}
+  </body>
+  <tfoot>
+    <tr>
+        <td colspan="3">
+            Total de la compra: {{importe_total_carroPS5}} $
+        </td>
+    </tr>
+  </tfoot>
+</table>
+

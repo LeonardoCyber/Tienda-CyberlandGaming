@@ -1,0 +1,38 @@
+{%extends "CG_app/base.html"%}
+
+{%load static%}
+
+{%block content%}
+
+{% if "exito" in request.GET %}
+      
+<div class="divGraciasEnviar">
+ <p class="graciasPorEnviar">¡Gracias por enviar tus datos!</p> 
+</div>
+
+{% endif %}
+
+
+<div class="divPonte">
+<p class="ponteEn">¡Contactanos!</p>
+</div>
+<section class="contflex">
+ <div class="contformulario">
+    <form class="formCon" action="" method="POST">
+      {% csrf_token %}
+    <table class="conttable">{{mi_formulario}}</table>
+    <input class="formBoton" type="submit" value="Enviar">
+   </form>
+  </div>
+</section>
+
+
+<div class="conta">
+  <img src="{%static 'CG_app/img/teclado.jpg'%}" alt="">
+  <div class="produContac">
+
+  </div>
+</div>
+
+
+{%endblock%}
