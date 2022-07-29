@@ -1,7 +1,7 @@
 {%extends "CG_app/base.html"%}
 
 {%load static%}
-
+{%load crispy_forms_tags%}
 {%block content%}
 
 {% if "exito" in request.GET %}
@@ -21,6 +21,7 @@
     <form class="formCon" action="" method="POST">
       {% csrf_token %}
     <table class="conttable">{{mi_formulario}}</table>
+    {{form|crispy}}
     <input class="formBoton" type="submit" value="Enviar">
    </form>
   </div>
