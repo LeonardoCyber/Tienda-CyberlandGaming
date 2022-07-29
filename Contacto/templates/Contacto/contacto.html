@@ -1,7 +1,6 @@
 {%extends "CG_app/base.html"%}
-
 {%load static%}
-{%load crispy_forms_tags%}
+
 {%block content%}
 
 {% if "exito" in request.GET %}
@@ -14,26 +13,18 @@
 
 
 <div class="divPonte">
-<p class="ponteEn">¡Contactanos!</p>
+<p class="ponteEn">¿Tienes alguna duda o comentario?<br>contáctanos</p>
 </div>
-<section class="contflex">
- <div class="contformulario">
-    <form class="formCon" action="" method="POST">
+  <div class="divf">
+  <form class="formCon" action="" method="POST">
+      
       {% csrf_token %}
     <table class="conttable">{{mi_formulario}}</table>
-    {{form|crispy}}
+  <div class="divBo">
     <input class="formBoton" type="submit" value="Enviar">
-   </form>
   </div>
-</section>
-
-
-<div class="conta">
-  <img src="{%static 'CG_app/img/teclado.jpg'%}" alt="">
-  <div class="produContac">
-
-  </div>
-</div>
-
+  </form>
+</div> 
 
 {%endblock%}
+

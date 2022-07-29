@@ -1,3 +1,4 @@
+import django
 from django.shortcuts import redirect, render
 from .forms import Formulario_contacto
 from django.core.mail import EmailMessage

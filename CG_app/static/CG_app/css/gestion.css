@@ -76,7 +76,7 @@
 }  
 
 .formBoton{
-  width: 150px;
+  width: 10%;
   background-color: rgb(255, 238, 0);
   color: rgb(0, 0, 0);
   font-weight: 600;
@@ -87,8 +87,11 @@
 }
 .formBoton:hover{
   box-shadow: 0 0 1.5em rgb(98, 0, 255);
+  
 }
-
+.divBo{
+  text-align: center;
+}
   
   
 
@@ -109,11 +112,14 @@
 
 .conttable{
   color: white;
-  font-family: 'lora';
+  font-family: 'Raleway';
   margin: 10px auto;
   
+  
 }
-
+.divf{
+  text-align: center;
+}
 
 
 .contformulario{
@@ -121,7 +127,9 @@
   margin-top: 30px;
   
 }
-
+.formCon{
+  text-align: center;
+}
 .linksFlecha{
   font-size: 170%;
   font-family: 'Raleway';
@@ -614,7 +622,16 @@ ul.errorlist{
   text-shadow: 0 0 1.5rem yellow, 0 0 1.5rem yellow;
   font-family: 'Raleway';
 }
-
+.LOgin{
+ font-size: 190%;
+ margin: 10px;
+ 
+}
+.REgisB{
+  font-size: 190%;
+  margin: 10px;
+  
+}
 
 
 

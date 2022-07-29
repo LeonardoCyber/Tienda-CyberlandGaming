@@ -47,7 +47,7 @@
         {% if user.is_authenticated%}
           ¡Hola {{user.username}}! &nbsp; &nbsp; <a style="color:yellow ;" href="{%url 'cerrar_sesion'%}">Cerrar sesión</a>
         {%else%}
-          <a style="color: yellow ;" href="{% url 'logear' %}">Login</a><span style="color: rgb(255, 255, 255) ;">/</span><a style="color:yellow ;" href="{% url 'autenticacion'%}">Registrate</a>
+          <a class="LOgin" style="color: yellow ;" href="{% url 'logear' %}">Login</a><a class="REgisB" style="color:yellow ;" href="{% url 'autenticacion'%}">Registrate</a>
         {%endif%}
       </div>
  <!-- Navbar -->
