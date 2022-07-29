@@ -130,48 +130,14 @@
 .formCon{
   text-align: center;
 }
-.linksFlecha{
-  font-size: 170%;
-  font-family: 'Raleway';
-  color: white;
-  text-shadow: 0 0 20px rgb(255, 255, 255);
-  text-align: center;
-}
-
-.tituLink{
-  font-family: 'Raleway';
-  color: rgb(255, 255, 255);
-  font-size: 300%;
-  text-align: center;
-  display: flex;
-  margin-left: 8%;
-  text-shadow: 0 0 20px rgb(255, 255, 255)
-}
-
-.clickico{
-  color: white;
-  text-align: center;
-  font-size: medium;
-  margin-left: 245px;
-  width: 30%;
-  height: 1px;
-  font-size: 20px;
-  text-shadow: 0 0 30px rgb(217, 255, 0)
-}
-
-.links{
-  margin-left: 1%;
-  text-align: left;
-}
-
 .minecra{
   text-align: center;
   animation: movimiento 2.5s linear infinite;
 }
 
 .minecra img{
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   
 }
 
@@ -632,15 +598,48 @@ ul.errorlist{
   margin: 10px;
   
 }
+.flex-conthome{
+  display: flex;
+  padding: 5px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.flex-conthome div{
+  color: black;
+  padding: 10px;
 
+}
+.videoY{
+  border: solid 5px rgba(95, 0, 249, 0.653);
+  height: 347px;
+  box-shadow: inset 0 0 15px rgb(95, 0, 249),0 0 15px rgb(95, 0, 249);
+  background-color: rgb(95, 0, 249, 0.266);
+}
+.linksH{
+  color: white;
+  font-family: 'Raleway';
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 0 0 1.5rem rgb(255, 255, 255),0 0 1.5rem rgb(255, 255, 255);
+}
+.flex-contmiddle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+}
 
-
-
-
-
-
-
-
+.textnot{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.textnoticia{
+  color: white;
+  font-family: 'Raleway';
+  font-size: 25px;
+  text-align: left;
+  margin: 15px;
+  font-weight: 600;
+}
 
 
 
