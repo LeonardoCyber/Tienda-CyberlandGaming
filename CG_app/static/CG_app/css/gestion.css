@@ -185,7 +185,7 @@ p {
 }
 
 .site-heading .site-heading-lower {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 100;
   line-height: 4rem;
   text-shadow: 0 0 50px rgb(255, 255, 255),0 0 50px rgb(127, 6, 202);
@@ -255,7 +255,7 @@ p {
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
+    font-size: 25px;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
@@ -603,10 +603,12 @@ ul.errorlist{
   padding: 10px;
   flex-flow: row wrap;
   justify-content: center;
+  border: 10px;
 }
 .flex-contgat{
   display: flex;
   padding: 5px;
+  margin: 25px;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
@@ -621,12 +623,11 @@ ul.errorlist{
 }
 .flex-conthome div{
   color: black;
-  padding: 10px;
-
+  margin: 40px;
 }
 .videoY{
   border: solid 5px rgba(155, 93, 255, 0.653);
-  height: 347px;
+  height: 330px;
   box-shadow: inset 0 0 15px rgb(95, 0, 249),0 0 15px rgb(95, 0, 249);
   background-color: rgb(95, 0, 249, 0.266);
 }
@@ -642,8 +643,10 @@ ul.errorlist{
   flex-direction: column;
   justify-content: center;
   margin: 30px;
+  background-color: rgb(95, 0, 249, 0.266);
+  box-shadow: 0 0 30px black;
+  
 }
-
 .textnot{
   background-color: rgba(0, 0, 0, 0.341);
 }
@@ -657,16 +660,28 @@ ul.errorlist{
 }
 .lineaDivisora{
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 15px purple,0 0 15px purple;
+  font-weight: 550;
   font-family: 'Raleway';
   font-weight: 650;
   background-color: rgb(95, 0, 249, 0.266);
   font-size: 25px;
 }
 .fondoredes{
-  background-color: rgba(95, 0, 249, 0.418);
-  border-radius: 15px;
+  background-color: rgba(35, 23, 86, 0.876);
+  box-shadow: 0 0 35px rgb(226, 226, 226);
   border: solid 1px white;
-  box-shadow: 0 0 35px black;
-  margin: 10px;
+  margin: 80px;
+  justify-content: space-around;
+  border-radius: 10px;
 }
+.bgcolor{
+  background-color: rgb(14, 14, 14);
+  justify-items: center;
+  box-shadow: 0 0 20px black;
+  border-radius: 15px;
+  margin: 25px;
+  border: solid 1px rgb(255, 255, 255);
+}
+
