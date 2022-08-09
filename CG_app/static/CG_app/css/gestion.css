@@ -1,33 +1,14 @@
 .bodyBase{
-  font-family: 'Lora';
-  background: linear-gradient(rgba(14, 7, 4, 0.65), rgba(14, 7, 4, 0.65)), url("../img/bearded-man-playing-online-video-games-on-his-pc-and-talking-with-others-players-colorful-neons-in-the-room.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(11, 3, 24);
 }
-
 .bodyTienda{
-  font-family: 'Lora';
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../img/happy-blonde-girl-winning-at-shooter-game-she-is-playing-on-powerful-gaming-computer.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(11, 3, 24);
 }
-
 .bodyServi{
-  font-family: 'Lora';
-  background: linear-gradient(rgba(14, 7, 4, 0.65), rgba(14, 7, 4, 0.65)), url("../img/serbg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(11, 3, 24);
 }
 .bodyRegis{
-  font-family: 'Lora';
-  background: linear-gradient(rgba(51, 26, 17, 0.65), rgba(47, 23, 15, 0.65)), rgb(4, 6, 135);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-
+  background-color: rgb(11, 3, 24);
 }
 
 .vid{
@@ -665,7 +646,6 @@ ul.errorlist{
   font-weight: 550;
   font-family: 'Raleway';
   font-weight: 650;
-  background-color: rgb(95, 0, 249, 0.266);
   font-size: 25px;
 }
 .fondoredes{
@@ -677,11 +657,15 @@ ul.errorlist{
   border-radius: 10px;
 }
 .bgcolor{
-  background-color: rgb(14, 14, 14);
+  background-color: rgb(14, 14, 36);
   justify-items: center;
   box-shadow: 0 0 20px black;
-  border-radius: 15px;
-  margin: 25px;
-  border: solid 1px rgb(255, 255, 255);
-}
+  margin: 20px;
 
+}
+.seccionStray{
+  background-color: rgb(14, 14, 36);
+  box-shadow: 0 0 20px black;
+  margin: 20px;
+  border-radius: 10px;
+}
